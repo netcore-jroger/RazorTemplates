@@ -20,8 +20,10 @@ namespace RazorTemplates.Core
         /// </summary>
         public virtual string Render(object model)
         {
-            Model = model;
-            Execute();
+            this._buffer.Clear();
+
+            this.Model = model;
+            this.Execute();
             return _buffer.ToString();
         }
 
