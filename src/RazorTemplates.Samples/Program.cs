@@ -6,6 +6,7 @@ namespace RazorTemplates.Samples
 {
     class Program
     {
+        // 一些使用技巧 https://github.com/aspnet/Razor/issues/788
         static void Main()
         {
             SimpleTemplate();
