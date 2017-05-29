@@ -1,6 +1,8 @@
 RazorTemplates
 ==============
 
+[![Build status](https://ci.appveyor.com/api/projects/status/temo2ncvsowcjasb?svg=true)](https://ci.appveyor.com/project/netcore-jroger/razortemplates)
+
 Open source templating engine based on Microsoft's Razor parsing engine. Thread safe. Allows to run Razor templates outside of ASP.NET projects.
 
 ## Install ##
