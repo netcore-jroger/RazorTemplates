@@ -67,7 +67,10 @@ namespace RazorTemplates.Core
 
             var parameters = CreateCompilerParameters(tempDirectory, assemblyFileNames);
             var compileResult = codeProvider.CompileAssemblyFromDom(parameters, compileUnit);
-            if (compileResult.Errors != null && compileResult.Errors.Count > 0)
+
+            // if (compileResult.Errors != null && compileResult.Errors.Count > 0)
+            // fix for mono: with compiler warnings then compileResult.Errors.Count > 0. Better to check HasErrors property
+            if (compileResult.Errors != null && compileResult.Errors.HasErrors)
                 throw new TemplateCompilationException(compileResult.Errors, sourceCode, templateBody);
 
             var fullClassName = TEMPLATES_NAMESPACE + "." + className;
